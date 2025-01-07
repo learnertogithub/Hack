@@ -6,16 +6,6 @@
     <title>Virtual Friend</title>
     <style>
       :root {
-        --bg-color: #f3f4f6;
-        --text-color: #333;
-        --header-bg: #4caf50;
-        --chat-bg: #ffffff;
-        --chat-border: #e0e0e0;
-        --toggle-bg: #4caf50;
-        --toggle-text: #ffffff;
-      }
-
-      [data-theme="dark"] {
         --bg-color: #121212;
         --text-color: #ffffff;
         --header-bg: #1e1e1e;
@@ -23,6 +13,16 @@
         --chat-border: #333;
         --toggle-bg: #1e1e1e;
         --toggle-text: #4caf50;
+      }
+
+      [data-theme="light"] {
+        --bg-color: #f3f4f6;
+        --text-color: #333;
+        --header-bg: #4caf50;
+        --chat-bg: #ffffff;
+        --chat-border: #e0e0e0;
+        --toggle-bg: #4caf50;
+        --toggle-text: #ffffff;
       }
 
       body {
@@ -120,15 +120,15 @@
       }
     </style>
   </head>
-  <body>
+  <body data-theme="dark">
     <div class="chat-container">
       <header>
         Virtual Friend
-        <button class="theme-toggle" onclick="toggleTheme()">Dark Mode</button>
+        <button class="theme-toggle" onclick="toggleTheme()">Light Mode</button>
       </header>
       <div class="chat-window">
-        <iframe
-          src="https://cdn.botpress.cloud/webchat/v2.2/shareable.html?configUrl=https://files.bpcontent.cloud/2025/01/07/17/20250107174829-BU1R9K5T.json"
+        <iframe 
+          src="https://cdn.botpress.cloud/webchat/v2.2/shareable.html?configUrl=https://files.bpcontent.cloud/2025/01/07/17/20250107174829-BU1R9K5T.json" 
           title="Virtual Friend Chatbot">
         </iframe>
       </div>
@@ -144,7 +144,7 @@
         const toggleButton = document.querySelector(".theme-toggle");
 
         if (currentTheme === "dark") {
-          body.removeAttribute("data-theme");
+          body.setAttribute("data-theme", "light");
           toggleButton.textContent = "Dark Mode";
         } else {
           body.setAttribute("data-theme", "dark");
