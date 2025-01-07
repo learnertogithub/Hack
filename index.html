@@ -2,17 +2,65 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>ResultPage</title>
+    <title>Virtual Friend</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f3f4f6;
+        color: #333;
+      }
+
+      header {
+        text-align: center;
+        background-color: #4caf50;
+        color: white;
+        padding: 20px 0;
+      }
+
+      marquee {
+        color: #4caf50;
+        font-size: 1.2em;
+        margin: 10px 0;
+      }
+
+      .chatbot-container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      iframe {
+        width: 100%;
+        height: 600px;
+        border: none;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+
+      footer {
+        text-align: center;
+        margin: 20px 0;
+        color: #555;
+      }
+    </style>
   </head>
   <body>
-    <h1 align="center">Virtual Friend</h1>
+    <header>
+      <h1>Virtual Friend</h1>
+    </header>
     <marquee>Designed for NBKRIST Students</marquee>
-    
-    <!-- Embed the chatbot interface -->
-    <iframe 
-      src="https://cdn.botpress.cloud/webchat/v2.2/shareable.html?configUrl=https://files.bpcontent.cloud/2025/01/07/17/20250107174829-BU1R9K5T.json" 
-      style="border: none; width: 100%; height: 500px;" 
-      title="Virtual Friend Chatbot">
-    </iframe>
+    <div class="chatbot-container">
+      <iframe
+        src="https://cdn.botpress.cloud/webchat/v2.2/shareable.html?configUrl=https://files.bpcontent.cloud/2025/01/07/17/20250107174829-BU1R9K5T.json"
+        title="Virtual Friend Chatbot">
+      </iframe>
+    </div>
+    <footer>
+      &copy; 2025 NBKRIST Virtual Friend. All rights reserved.
+    </footer>
   </body>
 </html>
